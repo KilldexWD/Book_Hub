@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./build/css/style.css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Ubuntu:400,500&display=swap&subset=cyrillic"
+    rel="stylesheet">
+  <title>BookHub</title>
+</head>
+
+<body>
+  <!-- SPRITE -->
+  <svg display="none">
+    <symbol id="search">
+      <g clip-path="url(#clip0)">
+        <path
+          d="M5.979 2.06c2.746-2.746 7.215-2.746 9.961 0 2.745 2.746 2.745 7.215 0 9.961-2.445 2.445-6.254 2.707-8.998.798-.058.273-.19.534-.402.746l-4 4A1.487 1.487 0 11.438 15.46l3.998-4c.212-.21.473-.344.746-.401-1.91-2.745-1.648-6.553.798-9zm1.263 8.699a5.264 5.264 0 007.436 0 5.266 5.266 0 000-7.436 5.265 5.265 0 00-7.436 0 5.264 5.264 0 000 7.436z" />
+      </g>
+    </symbol>
+    <symbol id="next" viewBox="0 0 20 20">
+      <g clip-path="url(#clip0)">
+        <path
+          d="M19.5079 8.81243L11.1886 0.493093C10.5325 -0.163062 9.46827 -0.163062 8.81211 0.493093C8.15596 1.14925 8.15596 2.21343 8.81211 2.86958L15.9424 9.99984L8.81211 17.1301C8.15596 17.7862 8.15596 18.8504 8.81211 19.5066C9.46827 20.1627 10.5325 20.1627 11.1886 19.5066L19.5079 11.1873C20.1641 10.5327 20.1641 9.46858 19.5079 8.81243ZM9.5049 8.30865L2.90007 1.34744C2.2364 0.648839 1.16143 0.648839 0.497755 1.34744C-0.165918 2.04605 -0.165918 3.17934 0.497755 3.8788L5.90187 9.57433L0.497755 15.2699C-0.165918 15.9685 -0.165918 17.1026 0.497755 17.8012C1.16143 18.4999 2.2364 18.4999 2.90007 17.8012L9.5049 10.84C10.1686 10.1414 10.1686 9.00811 9.5049 8.30865Z"
+          fill="#2B71D9" />
+      </g>
+    </symbol>
+  </svg>
+  <!-- /SPRITE -->
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header__inner">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-2">
+            <a href="#">
+              <div class="logo">
+                <img src="./build/img/svg/logo.svg" alt="logo" class="logo__img">
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 offset-md-1">
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__item"><a href="#" class="nav__link">Аудиокниги</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Жанры</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Авторы</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Исполнители</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-md-3">
+            <form method="GET" action="#" class="search">
+              <button type="submit" class="search__btn"><svg class="search__btn">
+                  <use xlink:href="#search"></use>
+                </svg></button>
+              <input class="search__input" type="text" placeholder="Найди свою книгу">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- /HEADER -->
+
+  <!-- INTRO -->
+  <section class="intro">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 intro__inner">
+          <h1 class="intro__title">Рекомендуем к прослушиванию</h1>
+          <div class="slide" id="slider">
+            <div class="slide__book">
+              <div class="container-fluid">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="./build/img/main_page/book-intro.png" alt="book" class="slide__book-img">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="slide__book-info">
+                      <h2 class="slide__book-title">Думай и богатей</h2>
+                      <div class="slide__book-author">
+                        <span class="slide__book-author-1"><img src="./build/img/svg/author.svg" alt=""
+                            class="slide__book-author-1-img">Автор книги <a href="#"
+                            class="slide__book-author-1-link">Наполеон Хилл</a></span>
+                        <span class="slide__book-author-2"><img src="./build/img/svg/book.svg" alt=""
+                            class="slide__book-author-1-img">Жанр <a href="#"
+                            class="slide__book-author-1-link">Бизнес-литература</a></span>
+                      </div>
+                      <p class="slide__book-text">Книга американского писателя, журналиста и психолога Наполеона
+                        Хилла.
+                        Впервые была опубликована в 1937 году.
+                        Хотя название подразумевает, что эта книга рассказывает только о том, как стать богатым, автор
+                        поясняет, что излагаемая в ней
+                        философия может быть использована, чтобы помочь людям добиться успеха по всем направлениям.
+                      </p>
+                      <a class="slide__book-link" href="#">Подробнее о книге</a>
+                      <div class="slide__book-read">
+                        <img src="./build/img/svg/time.svg" alt="" class="slide__book-read-img">12 часов 5 минут
+                        <img src="./build/img/svg/reader.svg" alt="" class="slide__book-read-img1"><a href="#"
+                          class="slide__book-read-link">Владимир
+                          Князев</a>
+                      </div>
+                      <a href="book-page.html" class="slide__book-btn btn"><img src="./build/img/svg/btn-logo.svg"
+                          alt="" class="btn-img">Скачать и слушать</a>
+                    </div> <!-- slide__book-info -->
+                  </div> <!-- col-md-8 -->
+
+                </div> <!-- row no-gutters -->
+              </div> <!-- container -->
+            </div> <!-- slide__book -->
+          </div> <!-- slide -->
+        </div> <!-- col-md-9 -->
+        <div class="col-md-3">
+          <div class="slide1" id="slider1">
+            <div class="slide1__book" id="slider1__book">
+              <h3 class="slide1__book-title">Продавец обуви</h3>
+              <div class="slide1__book-info">
+                <span class="slide1__book-info-1">
+                  <img src="./build/img/svg/author.svg" alt="" class="slide1__book-info-1-img">Автор книги
+                  <a class="slide1__book-info-1-link">Фил Найт</a>
+                </span>
+                <span class="slide1__book-info-2">
+                  <img src="./build/img/svg/book.svg" alt="" class="slide1__book-info-1-img">Жанр
+                  <a class="slide1__book-info-1-link">Бизнес-литература</a>
+                </span>
+              </div>
+            </div> <!-- slide1__book -->
+            <div class="slide1__book slide1__book-active" id="slider1__book">
+              <h3 class="slide1__book-active-title">Думай и богатей</h3>
+              <div class="slide1__book-active-info">
+                <span class="slide1__book-active-info-1">
+                  <img src="./build/img/svg/author.svg" alt="" class="slide1__book-active-info-1-img">Автор книги
+                  <a href="#" class="slide1__book-active-info-1-link">Наполеон Хилл</a>
+                </span>
+                <span class="slide1__book-active-info-2">
+                  <img src="./build/img/svg/book.svg" alt="" class="slide1__book-active-info-1-img">Жанр
+                  <a href="#" class="slide1__book-active-info-1-link">Бизнес-литература</a>
+                </span>
+              </div>
+            </div> <!-- slide1__book -->
+            <div class="slide1__book" id="slider1__book">
+              <h3 class="slide1__book-title">Атлант расправил плечи</h3>
+              <div class="slide1__book-info">
+                <span class="slide1__book-info-1">
+                  <img src="./build/img/svg/author.svg" alt="" class="slide1__book-info-1-img">Автор книги
+                  <a class="slide1__book-info-1-link">Айн Рэнд</a>
+                </span>
+                <span class="slide1__book-info-2">
+                  <img src="./build/img/svg/book.svg" alt="" class="slide1__book-info-1-img">Жанр
+                  <a class="slide1__book-info-1-link">Фантастика</a>
+                </span>
+              </div>
+            </div> <!-- slide1__book -->
+            <div class="slide1__book" id="slider1__book">
+              <h3 class="slide1__book-title">Магия утра</h3>
+              <div class="slide1__book-info">
+                <span class="slide1__book-info-1">
+                  <img src="./build/img/svg/author.svg" alt="" class="slide1__book-info-1-img">Автор книги
+                  <a class="slide1__book-info-1-link">Хэд Элрод</a>
+                </span>
+                <span class="slide1__book-info-2">
+                  <img src="./build/img/svg/book.svg" alt="" class="slide1__book-info-1-img">Жанр
+                  <a class="slide1__book-info-1-link">Бизнес-литература</a>
+                </span>
+              </div>
+            </div> <!-- slide1__book -->
+          </div> <!-- slide1 -->
+        </div> <!-- col-md-3 -->
+      </div> <!-- row -->
+    </div> <!-- container -->
+  </section> <!-- intro -->
+  <!-- /INTRO -->
+
+  <!-- MAIN-content -->
+  <main class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 offset-md-1">
+          <h2 class="content-title">Последние поступления Аудиокниг:</h2>
+          <div class="content__book">
+            <a href="book-page.html"><img src="./build/img/main_page/dokinz.png" alt="Бог как иллюзия"
+                class="content__book-img"></a>
+            <div class="content__book-info">
+              <a href="book-page.html">
+                <h3 class="content__book-title">Бог как иллюзия</h3>
+              </a>
+              <div class="content__book-author">
+                <span class="content__book-author-1">
+                  <img src="./build/img/svg/author.svg" alt="" class="content__book-author-1-img">Автор книги
+                  <a href="#" class="content__book-author-1-link">Ричард Докинз</a>
+                </span>
+                <span class="content__book-author-2">
+                  <img src="./build/img/svg/book.svg" alt="" class="content__book-author-1-img">Жанр
+                  <a href="#" class="content__book-author-1-link">Научно-популярная</a>
+                </span>
+              </div> <!-- content__book-author -->
+              <p class="content__book-text">
+                Научно-популярная публицистическая книга английского этолога, биолога, популяризатора науки Ричарда
+                Докинза, профессора
+                Оксфордского университета.
+                В книге Докинз приводит доводы в пользу того, что сверхъестественного создателя
+                почти наверняка не существует.
+              </p> <!-- content__book-text -->
+              <hr class="content__book-hr">
+              <div class="content__book-read">
+                <img src="./build/img/svg/time.svg" alt="" class="content__book-read-img">12 часов 5 минут
+                <img src="./build/img/svg/reader.svg" alt="" class="content__book-read-img1"><a href="#"
+                  class="content__book-read-link">Владимир Князев</a> <a href="#"
+                  class="content__book-read-more">Подробнее о
+                  книге</a>
+              </div> <!-- content__book-read -->
+            </div> <!-- content__book-info -->
+          </div> <!-- content__book -->
+          <div class="content__book">
+            <a href="book-page.html"><img src="./build/img/main_page/lalu.png" alt="Компании будущего"
+                class="content__book-img"></a>
+            <div class="content__book-info">
+              <a href="book-page.html">
+                <h3 class="content__book-title">Компании будущего</h3>
+              </a>
+              <div class="content__book-author">
+                <span class="content__book-author-1">
+                  <img src="./build/img/svg/author.svg" alt="" class="content__book-author-1-img">Автор книги
+                  <a href="#" class="content__book-author-1-link">Фредерик Лалу</a>
+                </span>
+                <span class="content__book-author-2">
+                  <img src="./build/img/svg/book.svg" alt="" class="content__book-author-1-img">Жанр
+                  <a href="#" class="content__book-author-1-link">Бизнес-литература</a>
+                </span>
+              </div> <!-- content__book-author -->
+              <p class="content__book-text">
+                Принципиально новый взгляд на развитие организаций, который поможет перейти на следующий уровень
+                развития и построить
+                сознательную и цельную компанию будущего.
+              </p> <!-- content__book-text -->
+              <hr class="content__book-hr">
+              <div class="content__book-read">
+                <img src="./build/img/svg/time.svg" alt="" class="content__book-read-img">15 часов 45 минут
+                <img src="./build/img/svg/reader.svg" alt="" class="content__book-read-img1"><a href="#"
+                  class="content__book-read-link">Игорь Кузняк</a> <a href="#" class="content__book-read-more">Подробнее
+                  о
+                  книге</a>
+              </div> <!-- content__book-read -->
+            </div> <!-- content__book-info -->
+          </div> <!-- content__book -->
+          <div class="content__book">
+            <a href="#"><img src="./build/img/main_page/bown.png" alt="Код да Винчи" class="content__book-img"></a>
+            <div class="content__book-info">
+              <a href="#">
+                <h3 class="content__book-title">Код да Винчи</h3>
+              </a>
+              <div class="content__book-author">
+                <span class="content__book-author-1">
+                  <img src="./build/img/svg/author.svg" alt="" class="content__book-author-1-img">Автор книги
+                  <a href="#" class="content__book-author-1-link">Дэн Браун</a>
+                </span>
+                <span class="content__book-author-2">
+                  <img src="./build/img/svg/book.svg" alt="" class="content__book-author-1-img">Жанр
+                  <a href="#" class="content__book-author-1-link">Роман</a> | <a href="#"
+                    class="content__book-author-1-link1">Детектив</a>
+
+                </span>
+              </div> <!-- content__book-author -->
+              <p class="content__book-text">
+                Роман американского писателя Дэна Брауна, изданный в апреле 2003 года издательством «Doubleday Group».
+                «Код да Винчи»
+                стал продолжением другого популярного романа Брауна 2000 года «Ангелы и демоны».
+              </p> <!-- content__book-text -->
+              <hr class="content__book-hr">
+              <div class="content__book-read">
+                <img src="./build/img/svg/time.svg" alt="" class="content__book-read-img">12 часов 5 минут
+                <img src="./build/img/svg/reader.svg" alt="" class="content__book-read-img1"><a href="#"
+                  class="content__book-read-link">Владимир Князев</a> <a href="#"
+                  class="content__book-read-more">Подробнее о
+                  книге</a>
+              </div> <!-- content__book-read -->
+            </div> <!-- content__book-info -->
+          </div> <!-- content__book -->
+          <div class="content__book">
+            <a href="#"><img src="./build/img/main_page/dost.png" alt="Преступление и наказание"
+                class="content__book-img"></a>
+            <div class="content__book-info">
+              <a href="#">
+                <h3 class="content__book-title">Преступление и наказание</h3>
+              </a>
+              <div class="content__book-author">
+                <span class="content__book-author-1">
+                  <img src="./build/img/svg/author.svg" alt="" class="content__book-author-1-img">Автор книги
+                  <a href="#" class="content__book-author-1-link">Федор Достоевский</a>
+                </span>
+                <span class="content__book-author-2">
+                  <img src="./build/img/svg/book.svg" alt="" class="content__book-author-1-img">Жанр
+                  <a href="#" class="content__book-author-1-link">Роман</a> | <a href="#"
+                    class="content__book-author-1-link1">Классическая литература</a>
+                </span>
+              </div> <!-- content__book-author -->
+              <p class="content__book-text">
+                "Преступление и наказание" - высочайший образец криминального романа. В рамках жанра полицейского
+                расследования писатель
+                поставил вопросы, и по сей день не решенные. Кем должен быть человек: "тварью дрожащей", как говорит
+                Раскольников, или
+                "Наполеоном"?
+              </p> <!-- content__book-text -->
+              <hr class="content__book-hr">
+              <div class="content__book-read">
+                <img src="./build/img/svg/time.svg" alt="" class="content__book-read-img">12 часов 5 минут
+                <img src="./build/img/svg/reader.svg" alt="" class="content__book-read-img1"><a href="#"
+                  class="content__book-read-link">Владимир Князев</a> <a href="#"
+                  class="content__book-read-more">Подробнее о
+                  книге</a>
+              </div> <!-- content__book-read -->
+            </div> <!-- content__book-info -->
+          </div> <!-- content__book -->
+          <div class="content__book">
+            <a href="#"><img src="./build/img/main_page/menson.png" alt="Тонкое искусство пофигизма"
+                class="content__book-img"></a>
+            <div class="content__book-info">
+              <a href="#">
+                <h3 class="content__book-title">Тонкое искусство пофигизма</h3>
+              </a>
+              <div class="content__book-author">
+                <span class="content__book-author-1">
+                  <img src="./build/img/svg/author.svg" alt="" class="content__book-author-1-img">Автор книги
+                  <a href="#" class="content__book-author-1-link">Марк Мэнсон</a>
+                </span>
+                <span class="content__book-author-2">
+                  <img src="./build/img/svg/book.svg" alt="" class="content__book-author-1-img">Жанр
+                  <a href="#" class="content__book-author-1-link">Психология</a>
+                </span>
+              </div> <!-- content__book-author -->
+              <p class="content__book-text">
+                Современное общество пропагандирует культ успеха: будь умнее, богаче, продуктивнее – будь лучше всех.
+                Соцсети изобилуют
+                историями на тему, как какой-то малец придумал приложение и заработал кучу денег, а фото во френдленте
+                создают
+                впечатление, что окружающие живут лучше и интереснее, чем мы.
+              </p> <!-- content__book-text -->
+              <hr class="content__book-hr">
+              <div class="content__book-read">
+                <img src="./build/img/svg/time.svg" alt="" class="content__book-read-img">12 часов 5 минут
+                <img src="./build/img/svg/reader.svg" alt="" class="content__book-read-img1"><a href="#"
+                  class="content__book-read-link">Владимир Князев</a> <a href="#"
+                  class="content__book-read-more">Подробнее о
+                  книге</a>
+              </div> <!-- content__book-read -->
+            </div> <!-- content__book-info -->
+          </div> <!-- content__book -->
+          <div class="content__book">
+            <a href="#"><img src="./build/img/main_page/fring.png" alt="Мозг и душа" class="content__book-img"></a>
+            <div class="content__book-info">
+              <a href="#">
+                <h3 class="content__book-title">Мозг и душа. <br> <span>Как нервная деятельность формирует наш
+                    внутренний
+                    мир</span></h3>
+              </a>
+              <div class="content__book-author">
+                <span class="content__book-author-1">
+                  <img src="./build/img/svg/author.svg" alt="" class="content__book-author-1-img">Автор книги
+                  <a href="#" class="content__book-author-1-link">Крис Фрит</a>
+                </span>
+                <span class="content__book-author-2">
+                  <img src="./build/img/svg/book.svg" alt="" class="content__book-author-1-img">Жанр
+                  <a href="#" class="content__book-author-1-link">Научно-популярная</a>
+                </span>
+              </div> <!-- content__book-author -->
+              <p class="content__book-text">
+                Знаменитый британский нейрофизиолог Крис Фрит хорошо известен умением говорить просто об очень сложных
+                проблемах
+                психологии - таких как психическая деятельность, социальное поведение, аутизм и шизофрения.
+              </p> <!-- content__book-text -->
+              <hr class="content__book-hr">
+              <div class="content__book-read">
+                <img src="./build/img/svg/time.svg" alt="" class="content__book-read-img">12 часов 5 минут
+                <img src="./build/img/svg/reader.svg" alt="" class="content__book-read-img1"><a href="#"
+                  class="content__book-read-link">Владимир Князев</a> <a href="#"
+                  class="content__book-read-more">Подробнее о
+                  книге</a>
+              </div> <!-- content__book-read -->
+            </div> <!-- content__book-info -->
+          </div> <!-- content__book -->
+          <div class="content__book">
+            <a href="#"><img src="./build/img/main_page/vens.png" alt="Илон Маск" class="content__book-img"></a>
+            <div class="content__book-info">
+              <a href="#">
+                <h3 class="content__book-title">Илон Маск <br> <span>Tesla, SpaceX и дорога в будущее</span></h3>
+              </a>
+              <div class="content__book-author">
+                <span class="content__book-author-1">
+                  <img src="./build/img/svg/author.svg" alt="" class="content__book-author-1-img">Автор книги
+                  <a href="#" class="content__book-author-1-link">Эшли Вэнс</a>
+                </span>
+                <span class="content__book-author-2">
+                  <img src="./build/img/svg/book.svg" alt="" class="content__book-author-1-img">Жанр
+                  <a href="#" class="content__book-author-1-link">Биография</a> | <a href="#"
+                    class="content__book-author-1-link1">Технологии</a>
+                </span>
+              </div> <!-- content__book-author -->
+              <p class="content__book-text">
+                В книге «Илон Маск: Tesla, SpaceX и дорога в будущее» известный технологический журналист Эшли Вэнс
+                впервые предлагает
+                независимый и разносторонний взгляд на жизнь и достижения самого отважного предпринимателя Кремниевой
+                долины.
+              </p> <!-- content__book-text -->
+              <hr class="content__book-hr">
+              <div class="content__book-read">
+                <img src="./build/img/svg/time.svg" alt="" class="content__book-read-img">12 часов 5 минут
+                <img src="./build/img/svg/reader.svg" alt="" class="content__book-read-img1"><a href="#"
+                  class="content__book-read-link">Владимир Князев</a> <a href="#"
+                  class="content__book-read-more">Подробнее о
+                  книге</a>
+              </div> <!-- content__book-read -->
+            </div> <!-- content__book-info -->
+          </div> <!-- content__book -->
+        </div> <!-- col-md-9 offset-md-1 -->
+      </div> <!-- row -->
+    </div> <!-- container -->
+  </main> <!-- content -->
+  <!-- /MAIN-content -->
+
+  <!-- PAGES -->
+  <div class="pages">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 offset-md-4">
+          <div class="pages__in">
+            <div class="pages__inner pages__inner-active">
+              <span class="pages__inner-num">1</span>
+            </div>
+            <div class="pages__inner">
+              <span class="pages__inner-num">2</span>
+            </div>
+            <div class="pages__inner">
+              <span class="pages__inner-num">3</span>
+            </div>
+            <div class="pages-next">
+              <svg class="pages__inner-next">
+                <use xlink:href="#next"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /PAGES -->
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-2">
+            <a href="#">
+              <div class="logo">
+                <img src="./build/img/svg/logo.svg" alt="logo" class="logo__img">
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 offset-md-1">
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__item"><a href="#" class="nav__link">Аудиокниги</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Жанры</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Авторы</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Исполнители</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-md-3">
+            <div class="search-us">
+              <h4 class="search-us-title">Ищите нас</h4>
+              <div class="search-us-media">
+                <a href="" class="search-us-media-link"><img src="./build/img/svg/telegram.svg" alt="Telegram"></a>
+                <a href="" class="search-us-media-link"><img src="./build/img/svg/youtube.svg" alt="YouTube"></a>
+                <a href=""><img src="./build/img/svg/instagram.svg" alt="Instagram"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- /FOOTER -->
+
+
+</body>
+
+</html>

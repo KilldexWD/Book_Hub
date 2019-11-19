@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Ubuntu:400,500&display=swap&subset=cyrillic"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./build/css/style.css">
+
+  <title>Book page</title>
+</head>
+
+<body>
+  <!-- SPRITE -->
+  <svg display="none">
+    <symbol id="search">
+      <g clip-path="url(#clip0)">
+        <path
+          d="M5.979 2.06c2.746-2.746 7.215-2.746 9.961 0 2.745 2.746 2.745 7.215 0 9.961-2.445 2.445-6.254 2.707-8.998.798-.058.273-.19.534-.402.746l-4 4A1.487 1.487 0 11.438 15.46l3.998-4c.212-.21.473-.344.746-.401-1.91-2.745-1.648-6.553.798-9zm1.263 8.699a5.264 5.264 0 007.436 0 5.266 5.266 0 000-7.436 5.265 5.265 0 00-7.436 0 5.264 5.264 0 000 7.436z" />
+      </g>
+    </symbol>
+    <symbol id="next" viewBox="0 0 20 20">
+      <g clip-path="url(#clip0)">
+        <path
+          d="M19.5079 8.81243L11.1886 0.493093C10.5325 -0.163062 9.46827 -0.163062 8.81211 0.493093C8.15596 1.14925 8.15596 2.21343 8.81211 2.86958L15.9424 9.99984L8.81211 17.1301C8.15596 17.7862 8.15596 18.8504 8.81211 19.5066C9.46827 20.1627 10.5325 20.1627 11.1886 19.5066L19.5079 11.1873C20.1641 10.5327 20.1641 9.46858 19.5079 8.81243ZM9.5049 8.30865L2.90007 1.34744C2.2364 0.648839 1.16143 0.648839 0.497755 1.34744C-0.165918 2.04605 -0.165918 3.17934 0.497755 3.8788L5.90187 9.57433L0.497755 15.2699C-0.165918 15.9685 -0.165918 17.1026 0.497755 17.8012C1.16143 18.4999 2.2364 18.4999 2.90007 17.8012L9.5049 10.84C10.1686 10.1414 10.1686 9.00811 9.5049 8.30865Z"
+          fill="#2B71D9" />
+      </g>
+    </symbol>
+  </svg>
+  <!-- /SPRITE -->
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header__inner">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-2">
+            <a href="index.html">
+              <div class="logo">
+                <img src="./build/img/svg/logo.svg" alt="logo" class="logo__img">
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 offset-md-1">
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__item"><a href="#" class="nav__link">Аудиокниги</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Жанры</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Авторы</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Исполнители</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-md-3">
+            <form method="GET" action="#" class="search">
+              <button type="submit" class="search__btn"><svg class="search__btn">
+                  <use xlink:href="#search"></use>
+                </svg></button>
+              <input class="search__input" type="text" placeholder="Найди свою книгу">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- /HEADER -->
+
+  <main class="page-cont">
+    <div class="book">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="book__info">
+              <img src="./build/img/book_page/oruell.png" alt="1984" class="book__info-img">
+              <div class="book__info-read">
+                <span class="book__info-read-item">
+                  <img src="./build/img/svg/author.svg" alt="author"> Автор книги <span class="link"><a href="#">Джордж
+                      Оруэлл</a></span>
+                </span>
+                <span class="book__info-read-item"><img src="./build/img/svg/book.svg" alt="category"> Жанр <span
+                    class="link"><a href="#">Фантастика</a> | <a href="#">Антиутопия</a></span> </span>
+                <span class="book__info-read-item">
+                  <img src="./build/img/svg/reader.svg" alt="reder"> Читает <span class="link"><a href="#">Владимир
+                      Князев</a></span>
+                </span>
+              </div> <!-- book__info-read -->
+              <a href="#" class="book__info_btn btn"><img src="./build/img/svg/btn-logo.svg" alt=""
+                  class="btn-img">Скачать и слушать</a>
+            </div> <!-- book__info -->
+          </div> <!-- col-md-3 -->
+          <div class="col-md-9">
+            <div class="book__play">
+              <h1 class="book__play-title">1984</h1>
+              <div class="book__paly-sub">
+                <h3 class="book__play-sub-title">Слушать книгу на сайте</h3>
+                <span class="book__play-sub-time"><img src="./build/img/svg/time.svg" alt="time">12 часов 5 минут</span>
+              </div> <!-- book__paly-sub -->
+              <div class="book__play-player"><img src="./build/img/book_page/Player.png" alt="Player"></div>
+              <!-- book__paly-player -->
+            </div> <!-- book__play -->
+          </div> <!-- col-md-9 -->
+        </div> <!-- row -->
+        <div class="row ">
+          <div class="col-md-8 offset-md-2">
+            <div class="book__text">
+              <h3 class="book__text-title">О книге</h3>
+              <div class="book__text-disc">
+                <p>Фантастическая антиутопия Оруэлла – это мир тотального контроля и страха, где люди живут ради войны,
+                  ради того, чтобы
+                  скрыть правду и воспитать настоящих патриотов. В жестоком тоталитарном государстве люди лишены
+                  гражданских прав и
+                  собственного мнения. Культ Большого Брата подразумевает жесткую социальную иерархию, где даже
+                  проявление
+                  любви
+                  считается
+                  мыслепреступлением. Уинстон Смит понимает, что он пешка в этой истории, и тем не менее пытается что-то
+                  изменить.
+                  «1984»
+                  – это аллюзия на страны, в которых господствовал тоталитаризм. В ХХ веке книга была запрещена в
+                  социалистических
+                  государствах и вызвала волну возмущения по всему миру. Сейчас же «1984» считается ключевым
+                  произведением
+                  в жанре
+                  антиутопии.
+                </p>
+                <p>Действия романа происходят в 1984 г. в Лондоне, который принадлежит к Военно-воздушной Зоне номер 1
+                  (бывшей
+                  Великобритании). Она, в свою очередь, — провинция Океании (тоталитарного государства), которая
+                  занимает
+                  третью часть
+                  Земли, включая Великобританию, Южную и Северную Америку, Австралию, Южную Африку, и саму Океанию. Это
+                  государство воюет
+                  с двумя тоталитарными сверхдержавами — Остазией и Евразией. Как же видит 1984 год автор, написавший
+                  свой
+                  роман за 40 лет
+                  до этого… Что же здесь фантазия, а что может и схоже с реальностью?</p>
+              </div> <!-- book__text-disc -->
+            </div> <!-- book__text -->
+          </div> <!-- col-md-8 -->
+        </div> <!-- row -->
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <div class="book__author">
+              <h3 class="book__author-title">Другие книги автора <a href="#">Джордж Оруэлл</a></h3>
+              <div class="book__author-books">
+                <div class="book__author-books-item">
+                  <a href="#"><img src="./build/img/book_page/ping.png" alt=""></a>
+                  <a href="#">
+                    <h4>Скотный двор</h4>
+                  </a>
+                </div>
+                <div class="book__author-books-item">
+                  <a href="#"><img src="./build/img/book_page/ficus.png" alt=""></a>
+                  <a href="#">
+                    <h4>Да здравствует фикус !</h4>
+                  </a>
+                </div>
+                <div class="book__author-books-item">
+                  <a href="#"><img src="./build/img/book_page/katalon.png" alt=""></a>
+                  <a href="#">
+                    <h4>Памяти Каталонии</h4>
+                  </a>
+                </div>
+                <div class="book__author-books-item">
+                  <a href="#"><img src="./build/img/book_page/funt.png" alt=""></a>
+                  <a href="#">
+                    <h4>Фунты лиха в Париже и Лондоне</h4>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div> <!-- col-md-8 -->
+        </div> <!-- row -->
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <div class="book__author">
+              <h3 class="book__author-title">Книги жанра <a href="#">Антиутопия</a></h3>
+              <div class="book__author-books">
+                <div class="book__author-books-item">
+                  <a href="#"><img src="./build/img/book_page/bred.png" alt=""></a>
+                  <a href="#">
+                    <h4>451 градус по Фаренгейту</h4>
+                  </a>
+                </div>
+                <div class="book__author-books-item">
+                  <a href="#"><img src="./build/img/book_page/we.png" alt=""></a>
+                  <a href="#">
+                    <h4>Мы</h4>
+                  </a>
+                </div>
+                <div class="book__author-books-item">
+                  <a href="#"><img src="./build/img/book_page/world.png" alt=""></a>
+                  <a href="#">
+                    <h4>О дивный, новый мир</h4>
+                  </a>
+                </div>
+                <div class="book__author-books-item">
+                  <a href="#"><img src="./build/img/book_page/nasl.png" alt=""></a>
+                  <a href="#">
+                    <h4>Наследники</h4>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div> <!-- col-md-8 -->
+        </div> <!-- row -->
+      </div> <!-- container -->
+    </div> <!-- book -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-2">
+            <a href="#">
+              <div class="logo">
+                <img src="./build/img/svg/logo.svg" alt="logo" class="logo__img">
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 offset-md-1">
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__item"><a href="#" class="nav__link">Аудиокниги</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Жанры</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Авторы</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Исполнители</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-md-3">
+            <div class="search-us">
+              <h4 class="search-us-title">Ищите нас</h4>
+              <div class="search-us-media">
+                <a href="" class="search-us-media-link"><img src="./build/img/svg/telegram.svg" alt="Telegram"></a>
+                <a href="" class="search-us-media-link"><img src="./build/img/svg/youtube.svg" alt="YouTube"></a>
+                <a href=""><img src="./build/img/svg/instagram.svg" alt="Instagram"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- /FOOTER -->
+
+
+</body>
+
+</html>

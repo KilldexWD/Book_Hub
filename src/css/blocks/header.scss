@@ -1,0 +1,60 @@
+
+/* === HEADER === */
+
+.header {
+  background: #C1BFFF;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+
+    &__img {
+      margin-right: 30px;
+    }
+  }
+}
+
+@import "blocks/nav.scss";
+
+.search {
+  position: relative;
+
+  &__btn {
+    position: absolute;
+    top: 4px;
+    left: 13px;
+    background: transparent;
+    border: none;
+    width: 18px;
+    height: 18px;
+    fill: $main;
+
+    &:hover,
+    &:focus {
+      fill: $blue;
+      outline: none;
+    }
+  }
+
+  &__input {
+    background: #F9F9F9;
+    padding: 8px 58px;
+    border-style: none;
+    border-radius: 10px;
+    border: 1px solid $blue;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 10px rgba(43, 113, 217, 0.3);
+    }
+  }
+}

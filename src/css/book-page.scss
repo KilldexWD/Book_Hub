@@ -1,0 +1,106 @@
+.page-cont {
+  padding: 10rem 0;
+}
+
+.book {
+  &__info {
+    &-img {
+      margin-bottom: 3rem;
+    }
+    &-read {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 3.8rem;
+      &-item {
+        margin-bottom: 1.6rem;
+        img {
+          margin-right: 0.4rem;
+        }
+        .link {
+          font-size: 1.6rem;
+          font-weight: 400;
+          margin-left: 0.6rem;
+        }
+        &:last-child{ 
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  &__play {
+    margin-bottom: 8rem;
+    &-title {
+      @include sub-title-font;
+      font-size: 4rem;
+      margin-bottom: 2rem;
+    }
+    &-sub {
+      
+     &-title {
+       @include title-h3;
+       font-size: 2rem;
+       margin-right: 7.6rem;
+     }
+     &-time{
+       img{
+         margin-right: 1.6rem;
+       }
+     }
+    }
+    &-player {
+      margin-top: 4rem;
+      height: 485px;
+      background: $white;
+      border: 1px solid rgba(43, 113, 217, 0.4);
+      border-radius: 20px;
+      /* padding: 3rem; */
+    }
+  }
+  &__text {
+    margin-bottom: 8rem;
+    &-title{
+      @include sub-title-font;
+      margin-bottom: 1.6rem;
+    }
+    &-disc {
+      font-size: 1.6rem;
+      line-height: 150%;
+      p {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  &__author {
+    margin-bottom: 7rem;
+    &-title {
+      @include sub-title-font;
+      font-size: 2.8rem;
+      margin-bottom: 3rem;
+      }
+      &-books {
+        display: flex;
+        
+        &-item{
+          &:hover {
+            cursor:pointer
+          }
+           &:hover img
+           {
+            box-shadow: 0px 0px 10px rgba(43, 113, 217, 0.7);
+          }
+          &:hover h4 {
+             color: $blue;
+          }
+          margin-right: 3rem;
+          img {
+            margin-bottom: 1.6rem;
+        }
+         h4 {
+           @include title-h3;
+           
+         }
+        }
+      }
+    
+  }
+}

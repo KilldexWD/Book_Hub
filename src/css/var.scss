@@ -1,0 +1,79 @@
+/* Colors */
+$main: #17213C;
+$font-color: #222;
+$green: #3AECB7;
+$blue: #2b71d9;
+$white: #F5F5F5;
+$bg-color: #E5E5E5;
+
+/* Mixins */
+
+@mixin main-font {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: $font-color;
+  line-height: 145%;
+}
+
+@mixin slide-font {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: $font-color;
+  line-height: 150%;
+}
+
+@mixin link {
+  color: $blue;
+  text-decoration: none;
+
+  &:hover {
+    color: #194D9A;
+    text-decoration: none;
+  }
+}
+
+@mixin nav-font {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: $main;
+}
+
+@mixin title-font {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 4rem;
+  color: $blue;
+}
+
+@mixin sub-title-font {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  color: $main;
+  font-size: 3.2rem;
+}
+
+@mixin page-font {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 150%;
+  color: $blue;
+}
+
+@mixin title-h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: $main;
+  display: inline-block;
+}
+
+@mixin btn-font {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}

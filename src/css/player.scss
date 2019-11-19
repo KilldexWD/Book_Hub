@@ -1,0 +1,54 @@
+.containerPlayer {
+  width: 870px;
+  height: 485px;
+  background: #f5f5f5;
+  padding: 30px;
+  border: 1px solid rgba($blue, .4);
+  border-radius: 20px;
+}
+
+.playerContainer {
+  display: flex;
+  align-items: center;
+}
+
+.controls {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  &__item {
+    margin-right: 25px;
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+
+.volumeControl {
+  display: flex;
+  margin-right: 47px;
+  width: 195px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bar {
+  width: 150px;
+  height: 9px;
+  appearance: none;
+  border: 2px solid $blue;
+  border-radius: 20px;
+  outline: none;
+  &::-webkit-slider-thumb {
+    appearance: none;
+    background: #EBF4FF;
+    border: 2px solid $blue;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}

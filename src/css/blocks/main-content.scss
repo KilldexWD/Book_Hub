@@ -1,0 +1,121 @@
+.content{
+  padding-top: 100px;
+  margin-bottom: 3rem;
+  &-title {
+    @include title-font;
+    margin-bottom: 5rem;
+  }
+  &__book {
+    display: flex;
+    padding: 1.2rem 4rem 2rem 3.2rem;
+    background: #fbfbfb;
+    box-shadow: 0px 4px 10px rgba(23, 33, 60, 0.1);
+    border-radius: 10px;
+    margin-bottom: 5rem;
+    &-img {
+      margin-right: 6rem;
+      height: 254px;
+      border-radius: 5px;
+      &:hover {
+        box-shadow: 0px 0px 10px rgba(43, 113, 217, 0.7);
+      }
+    }
+    &-title {
+      display: inline-block;
+      @include title-h3;
+      font-size: 2.4rem;
+      margin-bottom: 1.5rem;
+      span{
+        font-size: 1.8rem;
+      }
+      &:hover {
+        color: $blue;
+      }
+    }
+    &-author{
+      font-size: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2rem;
+      &-1 {
+        margin-bottom: 1rem;
+        &-img{
+          margin-right: 1rem;
+        }
+        &-link {
+          font-size: 1.6rem;
+          margin-left: 1.6rem;
+        }
+        &-link1 {
+          font-size: 1.6rem;
+        }
+      }
+    }
+    &-text {
+      margin-bottom: 3.6rem;
+    }
+    &-hr {
+      background: rgba(43, 113, 217, 0.5);
+      box-shadow: 0px 1px 1px rgba(43, 113, 217, 0.1);
+      margin-top: 0;
+    }
+    &-read {
+      &-img, &-img1 {
+        margin-right: 1rem;
+      }
+      &-img1 {
+        margin-left: 6rem;
+      }
+      &-more {
+        margin-left: 8rem;
+        text-decoration: underline;
+      }
+    }
+  }
+
+}
+
+.pages {
+  margin-bottom: 9.5rem;  
+  &__in {
+     display: flex;
+  }
+ &-next {
+   padding: 0.6rem 1.5rem;
+   border: 2px solid #8BAEE2;
+   border-radius: 5px;
+   height: 3.5rem;
+   cursor: pointer;
+   &:hover {
+      background: #8BAEE2;
+
+    }
+    
+ }
+  &__inner {
+    cursor: pointer;
+    margin-right: 2.8rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 2px solid #8BAEE2;
+    border-radius: 5px;
+    text-align: center;
+    @include page-font;
+    &:hover {
+      background: #8BAEE2;
+      color: #f5f5f5;
+    }
+    &-active {
+      background: $blue;
+      border: 2px solid $blue;
+      color: #f5f5f5;
+      &:hover {
+      background: $blue;
+    }
+    }
+    &-next {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}
