@@ -1,10 +1,19 @@
 .containerPlayer {
-  width: 870px;
-  height: 485px;
+  width: 770px;
+  height: 200px;
   background: #f5f5f5;
-  padding: 30px;
+  padding: 30px 45px;
   border: 1px solid rgba($blue, .4);
   border-radius: 20px;
+}
+
+.btn--player {
+  border-style: none;
+  background: transparent;
+  outline: none;
+  &:hover, &:focus, &:active {
+    outline: none;
+  }
 }
 
 .playerContainer {
@@ -20,9 +29,9 @@
   list-style-type: none;
   display: flex;
   align-items: center;
-  margin-right: 30px;
+  margin-right: 50px;
   &__item {
-    margin-right: 25px;
+    margin-right: 10px;
     opacity: 0.9;
     &:hover {
       opacity: 1;
@@ -35,7 +44,7 @@
 
 .volumeControl {
   display: flex;
-  margin-right: 47px;
+  margin-right: 40px;
   width: 195px;
   justify-content: space-between;
   align-items: center;
@@ -118,8 +127,7 @@
   }
 }
 
-.progress {
-  width: 800px;
+.Progress {
   height: 1px;
   margin: 0 auto;
   display: flex;
@@ -135,7 +143,7 @@
     font-family: 'Ubuntu', sans-serif;
   }
   &__lvl {
-    width: 670px;
+    width: 570px;
     height: 7px;
     appearance: none;
     border: 2px solid $blue;
@@ -195,10 +203,10 @@
 }
 
 .playListContainer {
-  width: 741px;
+  width: 810px;
   height: 282px;
   overflow: auto;
-  padding-right: 69px;
+  
 }
 .play-list {
   list-style: none;
@@ -207,7 +215,7 @@
   &__item {
     display: flex;
     align-items: center;
-    margin-bottom: 2px;
+    margin-bottom: 28px;
     font-size: 18px;
     font-family: 'Ubuntu', sans-serif;
     &:last-child{
@@ -216,6 +224,11 @@
     &_link {
       display: flex;
       align-items: center;
+      color: $main;
+      margin-right: 473px;
+      img {
+        margin-right: 50px;
+      }
     }
   }
 }

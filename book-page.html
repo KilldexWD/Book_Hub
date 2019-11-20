@@ -93,20 +93,58 @@
                   class="btn-img">Скачать и слушать</a>
             </div> <!-- book__info -->
           </div> <!-- col-md-3 -->
-          <div class="col-md-9">
+          <div class="col-md-8">
             <div class="book__play">
               <h1 class="book__play-title">1984</h1>
               <div class="book__paly-sub">
                 <h3 class="book__play-sub-title">Слушать книгу на сайте</h3>
                 <span class="book__play-sub-time"><img src="./build/img/svg/time.svg" alt="time">12 часов 5 минут</span>
               </div> <!-- book__paly-sub -->
-              <div class="book__play-player"><img src="./build/img/book_page/Player.png" alt="Player"></div>
+              <div class="book__play-player">
+
+
+                <!-- =======   PLAYER =======  -->
+
+                <div class="containerPlayer">
+                  <div class="playerContainer">
+                    <ul class="controls">
+                      <li class="controls__item"> <button type="button" class="back btn--player"
+                          data-attr="backAudio"><img src="build/img/svg/-15c.svg" alt=""
+                            class="controls__item-img"></button></li>
+
+
+                      <li class="controls__item"><button type="button" class="play btn--player"
+                          data-attr="playPauseAudio"><img src="build/img/svg/Play.svg" alt=""
+                            class="controls__item-img"></button></li>
+
+                      <li class="controls__item"><button type="button" class="forward btn--player"
+                          data-attr="forwardAudio"><img src="build/img/svg/+15c.svg" alt=""
+                            class="controls__item-img"></button></li>
+                    </ul>
+                    <div class="volumeControl">
+                      <img src="build/img/svg/Volume.svg" alt='' class="volume_img">
+                      <div class="bar_outer">
+                        <p class="volCont">Громкость: <span id="value"></span> </p>
+                        <input class="bar" type="range" id="myRange" data-attr="rangeVolume" min="0" max="100"
+                          step="0.1" volume="0.7">
+
+                      </div>
+                    </div>
+                    <div class="timer">
+                      <span>Таймер сна</span>
+                      <img src="build/img/svg/timer.svg" alt="">
+                    </div>
+                  </div>
+                  <div class="Progress">
+                    <span class="Progress__span">6:41</span> <input type="range" id="progress" class="Progress__lvl"
+                      min="0" max="100" step="0.1">
+                    <span class="Progress__span">54:28</span>
+                  </div>
+                </div>
+                <!-- ======= /PLAYER ====== -->
+              </div>
               <!-- book__paly-player -->
             </div> <!-- book__play -->
-          </div> <!-- col-md-9 -->
-        </div> <!-- row -->
-        <div class="row ">
-          <div class="col-md-8 offset-md-2">
             <div class="book__text">
               <h3 class="book__text-title">О книге</h3>
               <div class="book__text-disc">
@@ -141,8 +179,11 @@
                   до этого… Что же здесь фантазия, а что может и схоже с реальностью?</p>
               </div> <!-- book__text-disc -->
             </div> <!-- book__text -->
-          </div> <!-- col-md-8 -->
+          </div> <!-- col-md-9 -->
         </div> <!-- row -->
+
+
+
         <div class="row">
           <div class="col-md-8 offset-md-2">
             <div class="book__author">
@@ -260,6 +301,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+  <script src="build/js/main-dist.js"></script>
 </body>
 
 </html>
