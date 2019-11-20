@@ -10,6 +10,8 @@
 .playerContainer {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .controls {
@@ -21,6 +23,10 @@
   margin-right: 30px;
   &__item {
     margin-right: 25px;
+    opacity: 0.9;
+    &:hover {
+      opacity: 1;
+    }
     &:last-child {
       margin-right: 0px;
     }
@@ -35,13 +41,24 @@
   align-items: center;
 }
 
+.volCont {
+  margin: 0px;
+}
+
 .bar {
   width: 150px;
   height: 9px;
   appearance: none;
   border: 2px solid $blue;
+  position: relative;
   border-radius: 20px;
+  background: linear-gradient(90deg, #f5f5f5 50%, #f5f5f5 50%);
   outline: none;
+  opacity: 0.85;
+  transition: opacity .2s;
+  &:hover {
+    opacity: 1;
+  }
   &::-webkit-slider-thumb {
     appearance: none;
     background: #EBF4FF;
@@ -50,5 +67,155 @@
     height: 18px;
     border-radius: 50%;
     cursor: pointer;
+    transition: .1s linear all;
+    &:hover, &:active {
+      width: 22px;
+      height: 22px;
+    }
+  }
+  &::-moz-range-thumb {
+    appearance: none;
+    background: #EBF4FF;
+    border: 2px solid $blue;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .1s linear all;
+    &:hover, &:active {
+      width: 22px;
+      height: 22px;
+    }
+  }
+  &::-moz-range-track {
+    width: 150px;
+  height: 9px;
+  appearance: none;
+  border: 2px solid $blue;
+  border-radius: 20px;
+  background:-webkit-linear-gradient(left, $blue 0%, $blue 70%, #fff 25%, #fff 100%);
+  outline: none;
+  transition: .1s linear all;
+    &:hover, &:active {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
+  padding: 17px 18px;
+  border: 1px solid rgba(#17213c, .1);
+  background: #f0eeee;
+  border-radius: 20px;
+  cursor: pointer;
+  &:hover {
+    background: #e6e2e2;
+  }
+}
+
+.progress {
+  width: 800px;
+  height: 1px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 27px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba($blue, .3);
+  box-shadow: 0 1px 0px rgba($blue, 0.03);
+  &__span {
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  &__lvl {
+    width: 670px;
+    height: 7px;
+    appearance: none;
+    border: 2px solid $blue;
+    position: relative;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #f5f5f5 50%, #f5f5f5 50%);
+    outline: none;
+    opacity: 0.85;
+    transition: opacity .2s;
+    &:hover {
+      opacity: 1;
+    } 
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      background: #EBF4FF;
+      border: 2px solid $blue;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: .1s linear all;
+      &:hover, &:active {
+        width: 22px;
+        height: 22px;
+      }
+    }
+    &::-moz-range-thumb {
+      appearance: none;
+      background: #EBF4FF;
+      border: 2px solid $blue;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: .1s linear all;
+      &:hover, &:active {
+        width: 22px;
+        height: 22px;
+      }
+    }
+    &::-moz-range-track {
+      width: 150px;
+    height: 9px;
+    appearance: none;
+    border: 2px solid $blue;
+    border-radius: 20px;
+    background:-webkit-linear-gradient(left, $blue 0%, $blue 70%, #fff 25%, #fff 100%);
+    outline: none;
+    transition: .1s linear all;
+      &:hover, &:active {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+}
+
+.playListContainer {
+  width: 741px;
+  height: 282px;
+  overflow: auto;
+  padding-right: 69px;
+}
+.play-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &_link {
+      display: flex;
+      align-items: center;
+    }
   }
 }
